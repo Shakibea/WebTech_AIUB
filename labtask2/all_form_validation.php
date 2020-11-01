@@ -9,6 +9,8 @@
         span {
             color: red;
         }
+
+      
     </style>
 </head>
 <body>
@@ -71,18 +73,18 @@ function test_input($data) {
 
         if(str_word_count($name) <= 1){ ?>
 
-    <p>atleast two words</p>
+    <span>atleast two words</span> <br>
     <?php      
         }
         if(empty($name)){ ?>
-          <p>can't be null</p> 
+          <span>can't be null</span> <br>
           
           <?php
         }
 
         if(preg_match("/^[A-Z][a-zA-Z -]+$/", $_POST["name"]) === 0){ ?>
         
-        <p>must start with Upper case letter</p>
+        <span>must start with Upper case letter</span><br>
 
 <?php
         }
